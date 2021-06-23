@@ -4,15 +4,16 @@ import sys
 import getopt
 import yaml
 
+
 class Web:
     def __init__(self) -> None:
-        self.ip = 'localhost' # default ip
-        self.port = '8545' # default port
-        self.filename = 'abi.yml' # default abi file
+        self.ip = 'localhost'  # default ip
+        self.port = '8545'  # default port
+        self.filename = 'abi.yml'  # default abi file
         self.set_opts()
 
     def set_opts(self) -> None:
-        opts, args = getopt.getopt(sys.argv[1:], 'i:p:n:', ['ip','port'])
+        opts, args = getopt.getopt(sys.argv[1:], 'i:p:n:', ['ip', 'port'])
 
         for opt, arg in opts:
             if opt == '-i':
@@ -42,5 +43,5 @@ class Web:
 
 
 if __name__ == '__main__':
-    conn = Connect()
+    conn = Web()
     conn.connect_to_web3()

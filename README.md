@@ -3,6 +3,7 @@
 # Prerequisite
 - remix
 - ethereum blocks
+- `pip install -r requirements.txt`
 
 # System
 - os : ubuntu
